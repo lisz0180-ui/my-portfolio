@@ -7,6 +7,7 @@ import GuestbookDeleteDialog from './guestbook-delete-dialog';
 import GuestbookDetail from './guestbook-detail';
 import GuestbookForm from './guestbook-form';
 import GuestbookList from './guestbook-list';
+import GuestbookStripArt from './guestbook-strip-art';
 
 const TABS = [
   { key: 'list', label: '방명록' },
@@ -101,25 +102,33 @@ export default function GuestbookCard() {
           id="guestbook-panel-list"
           aria-labelledby="guestbook-tab-list"
           hidden={activeTab !== 'list'}
-          sx={{ position: 'absolute', inset: 0, p: selectedEntry ? 1.5 : 0 }}
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            display: activeTab === 'list' ? 'flex' : 'none',
+            flexDirection: 'column',
+          }}
         >
-          {selectedEntry ? (
-            <GuestbookDetail
-              key={selectedEntry.id}
-              entry={selectedEntry}
-              onClose={() => setSelectedId(null)}
-              onRequestDelete={() => setIsDeleteOpen(true)}
-            />
-          ) : (
-            <GuestbookList
-              entries={entries}
-              isLoading={isLoading}
-              error={error}
-              onSelect={setSelectedId}
-              onRetry={reload}
-              onGoWrite={() => setActiveTab('write')}
-            />
-          )}
+          <Box sx={{ flex: 1, minHeight: 0, p: selectedEntry ? 1.5 : 0 }}>
+            {selectedEntry ? (
+              <GuestbookDetail
+                key={selectedEntry.id}
+                entry={selectedEntry}
+                onClose={() => setSelectedId(null)}
+                onRequestDelete={() => setIsDeleteOpen(true)}
+              />
+            ) : (
+              <GuestbookList
+                entries={entries}
+                isLoading={isLoading}
+                error={error}
+                onSelect={setSelectedId}
+                onRetry={reload}
+                onGoWrite={() => setActiveTab('write')}
+              />
+            )}
+          </Box>
+          <GuestbookStripArt />
         </Box>
 
         <Box

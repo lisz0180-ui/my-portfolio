@@ -3,6 +3,7 @@ import DeleteOutlined from '@mui/icons-material/DeleteOutlined';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { formatAuthorInfo, formatDateTime } from '../../utils/format-guestbook';
+import GuestbookBackdropArt from './guestbook-backdrop-art';
 
 const flipIn = keyframes`
   from { opacity: 0; transform: perspective(900px) rotateY(-14deg) scale(0.97); }
@@ -46,10 +47,14 @@ export default function GuestbookDetail({ entry, onClose, onRequestDelete }) {
         border: '1px solid var(--ct-line)',
         borderRadius: 2,
         cursor: 'pointer',
+        position: 'relative',
+        overflow: 'hidden',
         animation: `${flipIn} 0.28s ease-out`,
         '@media (prefers-reduced-motion: reduce)': { animation: 'none' },
+        '& > :not([aria-hidden])': { position: 'relative' },
       }}
     >
+      <GuestbookBackdropArt />
       <Box sx={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 1, flexWrap: 'wrap' }}>
         <Box sx={{ fontWeight: 700, color: 'var(--ct-accent)' }}>{formatAuthorInfo(entry)}</Box>
         <Box sx={{ fontSize: '0.8rem', color: 'var(--ct-sub)' }}>{formatDateTime(entry.created_at)}</Box>
