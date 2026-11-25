@@ -68,15 +68,15 @@ export default function GuestbookCard() {
                 fontSize: '0.95rem',
                 fontWeight: isActive ? 700 : 500,
                 cursor: 'pointer',
-                color: isActive ? 'var(--ct-blue)' : 'var(--ct-sub)',
+                color: isActive ? 'var(--ct-accent)' : 'var(--ct-sub)',
                 bgcolor: isActive ? 'var(--ct-card)' : 'var(--ct-tab-idle)',
                 border: '1px solid var(--ct-line)',
-                borderTop: isActive ? '3px solid var(--ct-blue)' : '1px solid var(--ct-line)',
+                borderTop: isActive ? '3px solid var(--ct-accent)' : '1px solid var(--ct-line)',
                 borderBottom: isActive ? '1px solid var(--ct-card)' : '1px solid var(--ct-line)',
                 borderRadius: '12px 12px 0 0',
                 mb: '-1px',
                 transition: 'color 0.15s, background-color 0.15s',
-                '&:hover': { color: 'var(--ct-blue)' },
+                '&:hover': { color: 'var(--ct-accent)' },
               }}
             >
               {label}

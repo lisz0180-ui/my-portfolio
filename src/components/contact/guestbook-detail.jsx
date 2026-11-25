@@ -51,7 +51,7 @@ export default function GuestbookDetail({ entry, onClose, onRequestDelete }) {
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 1, flexWrap: 'wrap' }}>
-        <Box sx={{ fontWeight: 700, color: 'var(--ct-blue)' }}>{formatAuthorInfo(entry)}</Box>
+        <Box sx={{ fontWeight: 700, color: 'var(--ct-accent)' }}>{formatAuthorInfo(entry)}</Box>
         <Box sx={{ fontSize: '0.8rem', color: 'var(--ct-sub)' }}>{formatDateTime(entry.created_at)}</Box>
       </Box>
 

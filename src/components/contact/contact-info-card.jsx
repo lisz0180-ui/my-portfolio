@@ -26,7 +26,7 @@ export default function ContactInfoCard() {
       <Box>
         <Box
           component="h2"
-          sx={{ m: 0, mb: 1.5, fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.28em', color: 'var(--ct-blue)' }}
+          sx={{ m: 0, mb: 1.5, fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.28em', color: 'var(--ct-accent)' }}
         >
           CONTACT
         </Box>

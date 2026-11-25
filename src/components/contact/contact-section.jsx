@@ -23,7 +23,7 @@ export default function ContactSection() {
         color: 'var(--ct-ink)',
         border: '1px solid var(--ct-line)',
         borderRadius: 2,
-        '& :focus-visible': { outline: '2px solid var(--ct-blue)', outlineOffset: 2 },
+        '& :focus-visible': { outline: '2px solid var(--ct-accent)', outlineOffset: 2 },
       }}
     >
       <Grid container spacing={{ xs: 2, md: 3 }}>

@@ -23,7 +23,7 @@ export default function GuestbookList({ entries, isLoading, error = '', onSelect
   if (isLoading) {
     return (
       <Box sx={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <CircularProgress size={28} aria-label="방명록 불러오는 중" sx={{ color: 'var(--ct-blue)' }} />
+        <CircularProgress size={28} aria-label="방명록 불러오는 중" sx={{ color: 'var(--ct-accent)' }} />
       </Box>
     );
   }
@@ -86,7 +86,7 @@ export default function GuestbookList({ entries, isLoading, error = '', onSelect
               textAlign: 'left',
               cursor: 'pointer',
               transition: 'background-color 0.15s',
-              '&:hover': { bgcolor: 'var(--ct-blue-soft)' },
+              '&:hover': { bgcolor: 'var(--ct-accent-soft)' },
             }}
           >
             <Box

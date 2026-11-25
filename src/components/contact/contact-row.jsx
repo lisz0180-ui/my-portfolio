@@ -27,8 +27,8 @@ export default function ContactRow({ icon: Icon, value, label, href }) {
           width: 36,
           height: 36,
           borderRadius: '50%',
-          bgcolor: 'var(--ct-blue-soft)',
-          color: 'var(--ct-blue)',
+          bgcolor: 'var(--ct-accent-soft)',
+          color: 'var(--ct-accent)',
         }}
       >
         <Icon sx={{ fontSize: 20 }} />
@@ -49,7 +49,7 @@ export default function ContactRow({ icon: Icon, value, label, href }) {
             color: 'var(--ct-ink)',
             textDecoration: 'none',
             overflowWrap: 'anywhere',
-            ...(href && { '&:hover': { color: 'var(--ct-blue)', textDecoration: 'underline' } }),
+            ...(href && { '&:hover': { color: 'var(--ct-accent)', textDecoration: 'underline' } }),
           }}
         >
           {value}
