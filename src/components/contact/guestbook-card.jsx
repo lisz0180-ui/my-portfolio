@@ -60,7 +60,7 @@ export default function GuestbookCard() {
               aria-controls={`guestbook-panel-${key}`}
               onClick={() => setActiveTab(key)}
               sx={{
-                minWidth: { xs: 96, sm: 120 },
+                flex: 1,
                 minHeight: isActive ? 46 : 40,
                 alignSelf: 'flex-end',
                 px: 2,
@@ -73,7 +73,7 @@ export default function GuestbookCard() {
                 border: '1px solid var(--ct-line)',
                 borderTop: isActive ? '3px solid var(--ct-blue)' : '1px solid var(--ct-line)',
                 borderBottom: isActive ? '1px solid var(--ct-card)' : '1px solid var(--ct-line)',
-                borderRadius: '10px 10px 0 0',
+                borderRadius: '12px 12px 0 0',
                 mb: '-1px',
                 transition: 'color 0.15s, background-color 0.15s',
                 '&:hover': { color: 'var(--ct-blue)' },
@@ -91,7 +91,7 @@ export default function GuestbookCard() {
           minHeight: 460,
           bgcolor: 'var(--ct-card)',
           border: '1px solid var(--ct-line)',
-          borderRadius: '0 12px 12px 12px',
+          borderRadius: '0 0 12px 12px',
           overflow: 'hidden',
           position: 'relative',
         }}
