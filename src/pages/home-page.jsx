@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import { ContactSection } from '../components/contact';
 import { SectionCard } from '../components/ui';
 
 const SECTIONS = [
@@ -29,13 +30,6 @@ const SECTIONS = [
     label: '04',
     text: '여기는 Projects 섹션입니다. 대표작 썸네일 3-4개와 \'더 보기\' 버튼이 들어갈 예정입니다.',
   },
-  {
-    id: 'contact',
-    title: 'Contact',
-    label: '05',
-    isSoft: true,
-    text: '여기는 Contact 섹션입니다. 연락처, SNS, 간단한 메시지 폼이 들어갈 예정입니다.',
-  },
 ];
 
 /**
@@ -53,6 +47,7 @@ export default function HomePage() {
             {text}
           </SectionCard>
         ))}
+        <ContactSection />
       </Box>
     </Container>
   );
